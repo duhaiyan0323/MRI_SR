@@ -12,7 +12,7 @@ from torch.utils.data import DataLoader
 import matplotlib.pyplot as plt
 import time
 import SimpleITK as sitk
-# from UNet3D import UNet3D
+
 from monai.transforms import (Compose, ScaleIntensity, CropForegroundd,apply_transform)
 from RDNetwork import RDN
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
