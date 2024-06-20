@@ -14,19 +14,19 @@ class Options():
     def initialize(self, parser):
 
         # basic parameters
-        parser.add_argument('--images_folder', type=str, default='/home/hydu/MRI_SR/processMRI2/FLAIR/data/LR/')
-        parser.add_argument('--labels_folder', type=str, default='/home/hydu/MRI_SR/processMRI2/FLAIR/data/HR/')
+        parser.add_argument('--lr_dir', type=str, default='/home/hydu/MRI_SR/processMRI2/FLAIR/data/LR/')
+        parser.add_argument('--hr_dir', type=str, default='/home/hydu/MRI_SR/processMRI2/FLAIR/data/HR/')
         parser.add_argument('--preload', type=str, default=None)
         parser.add_argument('--gpu_ids', type=str, default='4,5,6,7', help='gpu ids: e.g. 0  0,1,2, 0,2. use -1 for CPU')
         parser.add_argument('--workers', default=8, type=int, help='number of data loading workers')
         parser.add_argument('--save_dir', type=str, default='./checkpoints')
         parser.add_argument('--save_model_epochs', type=int, default=20)
-        parser.add_argument('--batch_size', type=int, default=5, help='batch size')
+        parser.add_argument('--batch_size', type=int, default=4, help='batch size')
         parser.add_argument('--in_channels', default=1, type=int, help='Channels of the input')
         parser.add_argument('--out_channels', default=1, type=int, help='Channels of the output')
 
         # training parameters
-        parser.add_argument('--epochs', default=500, help='Number of epochs')
+        parser.add_argument('--epochs', default=300, help='Number of epochs')
         parser.add_argument('--lr', default=0.0001, help='Learning rate')
 
         # Inference
